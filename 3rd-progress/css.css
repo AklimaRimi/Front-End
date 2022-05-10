@@ -1,0 +1,89 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	display: flex;
+	align-items:center ;
+	justify-content: center;
+	height: 100vh;
+	/*width: 50vw;*/
+}
+
+.container{
+
+}
+.progress-container{
+	display: flex;
+	/*margin: 10px;*/
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 350 px;
+	position: relative;
+
+}
+.circle{
+	background-color: white;
+	border-radius:50% ;
+	height: 30px;
+	width: 30px;
+	align-items: center;
+	display: flex;
+	padding: 5px;
+	margin: 5px;
+
+	justify-content: center;
+	border: 2px solid gray;
+}
+
+.circle.active{
+	
+	border: 1px solid blue;
+}
+
+.progress-container::before{
+	content: '';
+	background-color: gray;
+	position: absolute;
+	top: 50%;
+	left:5px;
+	trasform: translateY(-50%);
+	width: 85%;
+	height: 3px;
+	z-index: -1;
+	transition: all .2s ease-in;
+
+}
+
+.progress{
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left:5px;
+	trasform: translateY(-50%);
+	width: 0%;
+	height: 4px;
+	z-index: -1;
+	transition: all .4s ease;
+
+}
+.btn{
+	background-color: skyblue;
+	height: 30px;
+	width: 50px;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 15px;
+	
+}
+
+.btn:active{
+	transform: scale(.98);
+}
+.btn:disabled{
+	background-color: gray;
+	cursor: not-allowed;
+}
