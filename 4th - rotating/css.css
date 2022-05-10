@@ -1,0 +1,125 @@
+* {
+  font-family: 'FontAwesome';
+  padding: 0px;
+  margin: 0px;
+
+}
+.container{
+  padding-top: 30%;
+  position: relative;
+}
+.content{
+  padding: 10px;
+}
+h1, small, p, h3{
+  font-family: sans-serif;
+  color: white;
+  text-align: justify;
+
+}
+body{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: gray;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+
+ul{
+  margin: 50px;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 300px;
+}
+li{
+  text-decoration: none;
+}
+
+
+.circle-container{
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle-container.show{
+  transform: rotate(-80deg);
+  transition: transform .2s ease;
+}
+.circle-container.close{
+  transform: rotate(0deg);
+  transition: transform .2s ease;
+}
+
+
+
+.circle{
+  background: plum;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform .3s linear;
+}
+
+.circle button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  z-index: 1;
+  font-size: 26px;
+}
+
+
+
+.circle button:focus{
+ outline: none;
+}
+
+#open{
+  left: 70%;
+}
+#close{
+  left: 20%;
+  transform: rotate(80deg);
+  transform-origin: to top;
+}
+
+.img{
+  height: 400px;
+  width: 100%;
+  background-color: dimgray;
+  margin: 10px;
+}
+
+nav{
+  top: -200px;
+  left: -200px;
+  position: absolute;
+}
+ul{
+    display: flex;
+    align-content:center;
+    justify-content: center;
+    flex-direction: column;
+    height: 160px;
+
+}
+
+nav.show{
+  top: 200px;
+  left: 5px;
+  position: absolute;
+  /*transform: scale3d(1.0, 1.0, 1.0);*/
+  transition:all .01s ease;
+}
