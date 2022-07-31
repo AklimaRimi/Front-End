@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-flipper</title>
+</head>
+<style>
+body{
+    padding: 0px;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+button{
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+
+</style>
+<body>
+
+    <button>Change color</button>
+    
+</body>
+<script>
+
+    const btn = document.querySelector('button')
+    const body = document.querySelector('body')
+    color = ['red','green','blue','gray','purple','black']
+    fontColor = ['pink','white','white','blue','yellow','red']
+
+    btn.addEventListener('click',function(){
+        let x = Math.floor(Math.random()*color.length)
+        body.style.background = color[x];
+        btn.style.background = fontColor[x];
+        btn.style.color =color[x]
+
+
+    });
+
+
+</script>
+</html>

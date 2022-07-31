@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.15.0/js/all.js"></script>
+    <link href='https://css.gg/close.css' rel='stylesheet'>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+<style>
+    * {
+        font-family: "Font Awesome 5 Free Solid";
+        }
+    body{
+        padding: 0;
+        margin: 0;
+        background: url('decor1.webp') no-repeat center center/ cover;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 500px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 30px;
+        overflow: hidden;
+
+    }
+    .title{
+        font-size: 30px;
+        text-align: center;
+        color: rgba(183, 65, 14, .8);
+        margin-top: 40px;
+    }
+    .q1{
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        box-shadow: 2px 3px rgba(0, 0, 0, .2);
+        margin: 10px;
+        border-radius: 10px;
+        transition: all .5s ease;
+
+    }
+    .a{
+        width: 90%;
+        margin: 20px;
+        background: rgba(183, 65, 14, .7);
+        border-radius: 10px;
+        padding :10px;
+        color: white;
+        font-size: 16px;
+        display: none;
+        transition: all .5s ease;
+
+    }
+    .q{
+        display: flex;
+        padding-left: 20px;
+        padding-top: 15px;
+        font-size: 1.2rem;
+        color:gray;
+        justify-content: space-between;
+
+    }
+    i{
+        color:black;
+        z-index: 2;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    <!-- <i class="gg-math-minus"></i> -->
+ 
+</style>
+<body>
+    <div class="container">
+        <p class='title'>Frequently Asked Questions</p>
+        <div class="q1" id='q1'>
+            <div class="q">Which furniture do you use?<i id='q1-i' class="gg-close"></i></div>
+            <div class="a" id = 'a1'>Usually we use Hatil brand furnitures. But we can customize according customers choice.</div>
+        </div>
+        <div class="q1" id='q2'>
+            <div class="q">Do you prefer plants while decore room?<i id='q2-i' class="gg-close"></i></div>
+            <div class="a" id = 'a2'>Yes of course we prefer plants. Even we suggest our customer keep some plants in your room. Customers choice first.</div>
+        </div>
+
+        <div class="q1" id ='q3'>
+            <div class="q">Does your decore eco-friendly?<i id='q3-i' class="gg-close"></i></div>
+            <div class="a" id = 'a3'>We try so hard to make decore as eco-friendly as possible. We are concerning about our planet.</div>
+        </div>
+
+    </div>
+
+    
+</body>
+<script>
+    let q1 = document.querySelector('#q1')
+    let q1_i = document.querySelector('#q1-i')
+    let a1 = document.querySelector('#a1')
+
+    let q2 = document.querySelector('#q2')
+    let q2_i = document.querySelector('#q2-i')
+    let a2 = document.querySelector('#a2')
+
+    let q3 = document.querySelector('#q3')
+    let q3_i = document.querySelector('#q3-i')
+    let a3 = document.querySelector('#a3')
+
+    let x = 'remove'
+
+    q1_i.addEventListener('click',function(){
+        if(x === 'remove'){
+            q1.style.height = '150px';
+            q2.style.height = '50px';
+            q3.style.height = '50px';
+
+            a1.style.display = 'block';
+            a2.style.display = 'none';
+            a3.style.display = 'none';
+
+            x = 'click'
+        }
+        else{
+            q1.style.height = '50px';
+            a1.style.display = 'none';
+            x = 'remove'
+
+        }
+
+    })
+
+    q2_i.addEventListener('click',function(){
+        if(x === 'remove'){
+            q2.style.height = '150px';
+            q1.style.height = '50px';
+            q3.style.height = '50px';
+
+            a2.style.display = 'block';
+            a1.style.display = 'none';
+            a3.style.display = 'none';
+            x = 'click'
+        }
+        else{
+            q2.style.height = '50px';
+            a2.style.display = 'none';
+            x = 'remove'
+
+        }
+
+    })
+
+
+    q3_i.addEventListener('click',function(){
+        if(x === 'remove'){
+            q3.style.height = '150px';
+            q1.style.height = '50px';
+            q2.style.height = '50px';
+
+            a3.style.display = 'block';
+            a1.style.display = 'none';
+            a2.style.display = 'none';
+            x = 'click'
+        }
+        else{
+            q3.style.height = '50px';
+            a3.style.display = 'none';
+            x = 'remove'
+
+        }
+
+    })
+
+
+</script>
+</html>
